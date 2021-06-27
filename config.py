@@ -1,6 +1,8 @@
 import os
 import connexion
 
+from flask_sqlalchemy import SQLAlchemy
+
 basedir = os.path.abspath(os.path.dirname(__file__))
 
 # Create the Connexion application instance
@@ -14,3 +16,6 @@ app.config['SQLALCHEMY_ECHO'] = True
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////' + \
     os.path.join(basedir, 'people.db')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+# Create the SQLAlchemy db instance
+db = SQLAlchemy(app)
