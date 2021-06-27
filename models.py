@@ -12,7 +12,7 @@ class Person(db.Model):
     )
 
 
-class PersonSchema(ma.ModelSchema):
+class PersonSchema(ma.SQLAlchemySchema):
     class Meta:
         model = Person
-        sqla_session = db.session
+        #sqla_session = db.session
