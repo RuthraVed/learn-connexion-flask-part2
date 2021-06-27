@@ -1,11 +1,5 @@
 from datetime import datetime
-
-from flask_marshmallow import Marshmallow
-from config import app, db
-
-
-# Initialize Marshmallow
-ma = Marshmallow(app)
+from config import db, ma
 
 
 class Person(db.Model):
