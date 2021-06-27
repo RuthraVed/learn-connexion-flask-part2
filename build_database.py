@@ -17,8 +17,8 @@ if os.path.exists("people.db"):
 db.create_all()
 
 # iterate over the PEOPLE structure and populate the database
-for person in PEOPLE:
-    p = Person(lname=person.get("lname"), fname=person.get("fname"))
-    db.session.add(p)
+# for person in PEOPLE:
+#     p = Person(lname=person.get("lname"), fname=person.get("fname"))
+#     db.session.add(p)
 
 db.session.commit()
