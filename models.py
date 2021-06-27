@@ -12,7 +12,9 @@ class Person(db.Model):
     )
 
 
-class PersonSchema(ma.SQLAlchemySchema):
+class PersonSchema(ma.SQLAlchemyAutoSchema):
     class Meta:
         model = Person
         #sqla_session = db.session
+        include_relationships = True
+        load_instance = True

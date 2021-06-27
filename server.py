@@ -13,7 +13,7 @@ import config
 connex_app = config.connex_app
 
 # Read the swagger.yml file to configure the endpoints
-connex_app.add_api("swagger.yml")
+connex_app.add_api("swagger.yaml")
 
 
 # create a URL route in our application for "/"
